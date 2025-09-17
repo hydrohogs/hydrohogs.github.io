@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Piglet Package | HydroHogs Pressure Washing</title>
+    <meta name="description" content="The Piglet package includes thorough cleaning of your driveway and back patio areas. Starting at $149.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Include Header Component -->
+    <div id="header-placeholder"></div>
+
+    <!-- Package Hero Section -->
+    <section class="hero section fade-in">
+        <div class="hero-content">
+            <div class="package-hero-icon"></div>
+            <h2>The Piglet Package</h2>
+            <p>Perfect for smaller spaces - thorough cleaning for your essential outdoor areas</p>
+            <div class="hero-price">Starting at $149</div>
+        </div>
+    </section>
+
+    <!-- Package Details Section -->
+    <section class="section fade-in" style="background: white; padding: 6rem 0;">
+        <div class="container">
+            <div class="package-details">
+                <div class="package-info">
+                    <h2>What's Included</h2>
+                    <div class="services-included">
+                        <div class="service-item">
+                            <span class="service-icon"></span>
+                            <div class="service-details">
+                                <h3>Driveway Cleaning</h3>
+                                <p>Complete pressure washing of your driveway surface, removing oil stains, dirt, and grime buildup.</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-icon"></span>
+                            <div class="service-details">
+                                <h3>Back Patio Cleaning</h3>
+                                <p>Thorough cleaning of your back patio area, including concrete, stone, or brick surfaces.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="package-features">
+                        <h3>Package Features</h3>
+                        <ul>
+                            <li>✅ Professional-grade pressure washing equipment</li>
+                            <li>✅ Eco-friendly cleaning solutions</li>
+                            <li>✅ Complete debris removal</li>
+                            <li>✅ Free estimates</li>
+                            <li>✅ Satisfaction guarantee</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="booking-card">
+                    <div class="pricing-details">
+                        <h3>Pricing</h3>
+                        <div class="price-breakdown">
+                            <div class="price-item">
+                                <span>Driveway Cleaning</span>
+                                <span>$99</span>
+                            </div>
+                            <div class="price-item">
+                                <span>Back Patio Cleaning</span>
+                                <span>$79</span>
+                            </div>
+                            <div class="price-total">
+                                <span>Total Package Price</span>
+                                <span class="total-price">$149</span>
+                            </div>
+                            <div class="savings">Save $29 with package deal!</div>
+                        </div>
+                    </div>
+
+                    <div class="booking-form">
+                        <h3>Book The Piglet Package</h3>
+                        <form id="bookingForm">
+                            <input type="text" placeholder="Your Name" required>
+                            <input type="email" placeholder="Your Email" required>
+                            <input type="tel" placeholder="Your Phone Number" required>
+                            <input type="text" placeholder="Property Address" required>
+                            <textarea placeholder="Special requests or additional details..."></textarea>
+                            <button type="submit" class="btn">Book Now - $149</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="section fade-in" style="background: var(--light-blue); padding: 4rem 0;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose The Piglet?</h2>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon"></div>
+                    <h3>Budget Friendly</h3>
+                    <p>Perfect entry-level package for essential cleaning at an affordable price point.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"></div>
+                    <h3>Quick Service</h3>
+                    <p>Efficient 2-3 hour service window to get your spaces cleaned without disruption.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"></div>
+                    <h3>Professional Results</h3>
+                    <p>Same high-quality equipment and techniques as our premium packages.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Include Footer Component -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Load header and footer components
+        async function loadComponent(url, placeholderId) {
+            try {
+                const response = await fetch(url);
+                const html = await response.text();
+                document.getElementById(placeholderId).innerHTML = html;
+            } catch (error) {
+                console.error('Error loading component:', error);
+            }
+        }
+
+        // Load components when page loads
+        window.addEventListener('DOMContentLoaded', function() {
+            loadComponent('header.html', 'header-placeholder');
+            loadComponent('footer.html', 'footer-placeholder');
+        });
+
+        // Header Scroll Effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (header && window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else if (header) {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Fade In Animation on Scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Booking Form Handling
+        setTimeout(() => {
+            const bookingForm = document.getElementById('bookingForm');
+            if (bookingForm) {
+                bookingForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Thank you for booking The Piglet Package! We\'ll contact you within 24 hours to schedule your service.');
+                    this.reset();
+                });
+            }
+        }, 100);
+    </script>
+</body>
+</html>
