@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Lawncare Equipment Cleaning | HydroHogs Pressure Washing</title>
+    <meta name="description" content="Professional lawncare equipment cleaning service for $20. Lawn mower cleaning, trimmer washing, and equipment sanitization.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mobile-fixes.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="homepage">
+    <!-- Back Navigation -->
+    <a href="packages.html" class="back-nav" onclick="goBack()" title="Go Back"></a>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="https://thumbs2.imgbox.com/be/96/PSCMGbNy_t.png" alt="HydroHogs Army Logo" class="logo-img">
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <nav id="navigation" class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="packages.html">Packages</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Package Hero Section -->
+    <section class="hero section fade-in">
+        <div class="hero-content">
+            <div class="package-hero-icon">🚜</div>
+            <h2>Lawncare Equipment Cleaning</h2>
+            <p>Professional cleaning and maintenance for lawn mowers, trimmers, and outdoor power equipment</p>
+            <div class="hero-price">Only $20</div>
+        </div>
+    </section>
+
+    <!-- Package Details Section -->
+    <section class="section fade-in package-details-section">
+        <div class="container">
+            <div class="package-details-card">
+                <div class="package-details">
+                    <div class="package-info">
+                        <h2>What's Included</h2>
+                        <div class="services-included">
+                            <div class="service-item">
+                                <span class="service-icon">🚜</span>
+                                <div class="service-details">
+                                    <h3>Lawn Mower Cleaning</h3>
+                                    <p>Complete cleaning of your lawn mower deck, engine housing, and cutting components to remove grass buildup and debris.</p>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <span class="service-icon">✂️</span>
+                                <div class="service-details">
+                                    <h3>Trimmer & Edger Washing</h3>
+                                    <p>Thorough cleaning of string trimmers, edgers, and handheld equipment to maintain optimal performance.</p>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <span class="service-icon">🧽</span>
+                                <div class="service-details">
+                                    <h3>Equipment Sanitization</h3>
+                                    <p>Professional sanitization to remove bacteria, mold, and prevent corrosion on metal components.</p>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <span class="service-icon">🛡️</span>
+                                <div class="service-details">
+                                    <h3>Rust Prevention Treatment</h3>
+                                    <p>Application of protective treatments to prevent rust and extend the life of your equipment.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="package-features">
+                            <h3>Service Features</h3>
+                            <ul>
+                                <li>✅ Professional-grade cleaning solutions</li>
+                                <li>✅ Safe for all equipment types</li>
+                                <li>✅ Rust prevention treatment included</li>
+                                <li>✅ Quick 30-45 minute service</li>
+                                <li>✅ Equipment performance optimization</li>
+                                <li>✅ Satisfaction guarantee</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="booking-card">
+                        <div class="pricing-details">
+                            <h3>Pricing</h3>
+                            <div class="package-features-list">
+                                <span>✓ Lawn Mower Deep Clean</span>
+                                <span>✓ Trimmer & Edger Washing</span>
+                                <span>✓ Equipment Sanitization</span>
+                                <span>✓ Rust Prevention Treatment</span>
+                            </div>
+                            <div class="price-breakdown">
+                                <div class="price-total">
+                                    <span>Lawncare Equipment Cleaning</span>
+                                    <span class="total-price">$20</span>
+                                </div>
+                                <div class="savings">Per piece of equipment - Multiple equipment discounts available</div>
+                            </div>
+                        </div>
+
+                        <div class="booking-form">
+                            <h3>Book Equipment Cleaning</h3>
+                            <form id="bookingForm">
+                                <input type="text" name="name" placeholder="Your Name" required>
+                                <input type="email" name="email" placeholder="Your Email" required>
+                                <input type="tel" name="phone" placeholder="Your Phone Number" required>
+                                <input type="text" name="address" placeholder="Property Address" required>
+                                <select name="equipmentType" required>
+                                    <option value="">Select Equipment Type</option>
+                                    <option value="mower">Lawn Mower</option>
+                                    <option value="trimmer">String Trimmer/Edger</option>
+                                    <option value="blower">Leaf Blower</option>
+                                    <option value="chainsaw">Chainsaw</option>
+                                    <option value="multiple">Multiple Equipment</option>
+                                </select>
+                                <input type="number" name="equipmentCount" placeholder="Number of Equipment Pieces" min="1" max="10" required>
+                                <textarea name="notes" placeholder="Equipment details, special requests, or additional information..."></textarea>
+                                <button type="submit" class="btn">Book Now - $20</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="section fade-in" style="background: var(--light-blue); padding: 4rem 0;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Clean Your Lawncare Equipment?</h2>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Better Performance</h3>
+                    <p>Clean equipment runs more efficiently, cuts better, and uses less fuel while delivering superior results.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔧</div>
+                    <h3>Extended Lifespan</h3>
+                    <p>Regular cleaning prevents corrosion, reduces wear, and significantly extends the life of your equipment.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Cost Savings</h3>
+                    <p>Preventive maintenance through cleaning reduces costly repairs and replacement needs over time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>HydroHogs</h3>
+                    <p>Your trusted partner in professional pressure washing services. We make your property shine like new.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘 Facebook</a>
+                        <a href="#" aria-label="Instagram">📷 Instagram</a>
+                        <a href="mailto:HydrohogsPSI@gmail.com" aria-label="Email">✉️ Email</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="packages.html">House Washing</a></li>
+                        <li><a href="packages.html">Driveway Cleaning</a></li>
+                        <li><a href="packages.html">Deck & Fence Cleaning</a></li>
+                        <li><a href="packages.html">Commercial Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Shawn Hamilton</h3>
+                    <p>(904) 799-3932</p>
+                    <p>HydrohogsPSI@gmail.com</p>
+                    <p>Hydrohogs.com<br>U.S Veteran Owned & Operated</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 HydroHogs. All rights reserved. | Professional Pressure Washing Services</p>
+                    <div class="veteran-badge-footer">
+                        <span class="veteran-text">U.S Veteran Owned & Operated</span>
+                    </div>
+                </div>
+                <div class="developer-credits">
+                    <p>Website developed by <a href="https://ninjatechhq.com" target="_blank" rel="noopener noreferrer">NinjaTechHQ</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navigation = document.getElementById('navigation');
+
+        if (mobileMenuBtn && navigation) {
+            mobileMenuBtn.addEventListener('click', function() {
+                navigation.classList.toggle('active');
+                mobileMenuBtn.classList.toggle('active');
+            });
+
+            // Close menu when clicking on navigation links
+            const navLinks = navigation.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    navigation.classList.remove('active');
+                    mobileMenuBtn.classList.remove('active');
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!navigation.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                    navigation.classList.remove('active');
+                    mobileMenuBtn.classList.remove('active');
+                }
+            });
+        }
+
+        // Header Scroll Effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (header && window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else if (header) {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Fade In Animation on Scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Booking Form Handling
+        setTimeout(() => {
+            const bookingForm = document.getElementById('bookingForm');
+            if (bookingForm) {
+                bookingForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+
+                    // Calculate price based on number of equipment pieces
+                    const equipmentCount = parseInt(this.querySelector('[name="equipmentCount"]').value) || 1;
+                    const basePrice = 20;
+                    const discountPrice = 15; // Discount for additional equipment
+                    const totalPrice = basePrice + (Math.max(0, equipmentCount - 1) * discountPrice);
+
+                    // Store booking information in localStorage for payment page
+                    const formData = new FormData(this);
+                    const bookingData = {
+                        package: 'Lawncare Equipment Cleaning',
+                        price: '$' + totalPrice,
+                        name: formData.get('name'),
+                        email: formData.get('email'),
+                        phone: formData.get('phone'),
+                        address: formData.get('address'),
+                        equipmentType: formData.get('equipmentType'),
+                        equipmentCount: formData.get('equipmentCount'),
+                        notes: formData.get('notes'),
+                        timestamp: new Date().toISOString()
+                    };
+
+                    localStorage.setItem('hydroHogsBooking', JSON.stringify(bookingData));
+
+                    // Redirect to payment page
+                    window.location.href = 'payment.html';
+                });
+            }
+        }, 100);
+
+        // Smart back navigation function
+        function goBack() {
+            if (document.referrer && document.referrer !== window.location.href) {
+                // Go back to previous page if there's a referrer
+                window.history.back();
+            } else {
+                // Default to packages page if no referrer
+                window.location.href = 'packages.html';
+            }
+            return false;
+        }
+
+        // Add water ripple effect to buttons
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.classList.add('ripple');
+
+                this.appendChild(ripple);
+
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+    </script>
+</body>
+</html>
