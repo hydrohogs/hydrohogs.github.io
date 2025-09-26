@@ -1,0 +1,475 @@
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+    <title>Our Packages | HydroHogs - Professional Pressure Washing Service</title>
+    <meta name="description" content="Choose from our 8 professional pressure washing packages: The Piglet, The Razorback, The Full Boar, The Hog Wash, The Sea Hog, Holiday Hog Lights, Trash Bin Cleaning, and Lawncare Equipment. Professional cleaning services for homes and businesses.">
+    <link rel="stylesheet" href="styles.css?v=1">
+    <link rel="stylesheet" href="mobile-fixes.css?v=2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* DESKTOP STYLES - KEEP INTACT */
+        body.packages-page {
+            background: url('https://thumbs2.imgbox.com/65/f6/4tT3qghd_t.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        /* MOBILE-ONLY FIXES */
+        @media (max-width: 768px) {
+            /* MOBILE RESET */
+            * {
+                margin: 0 !important;
+                padding: 0 !important;
+                box-sizing: border-box !important;
+            }
+
+            html, body {
+                width: 100% !important;
+                height: 100% !important;
+                overflow-x: hidden !important;
+                background: #2d5a2d !important;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif !important;
+            }
+
+            body.packages-page {
+                background: url('https://thumbs2.imgbox.com/65/f6/4tT3qghd_t.png') !important;
+                background-size: cover !important;
+                background-position: center !important;
+                background-repeat: no-repeat !important;
+                background-attachment: scroll !important;
+                min-height: 100vh !important;
+                display: flex !important;
+                flex-direction: column !important;
+            }
+
+            /* HIDE LOADER IMMEDIATELY ON MOBILE */
+            .page-loader, #pageLoader, .water-loader {
+                display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+            }
+
+            /* MOBILE HEADER */
+            #header {
+                position: fixed !important;
+                top: 0 !important;
+                left: 0 !important;
+                right: 0 !important;
+                width: 100% !important;
+                height: 50px !important;
+                background: rgba(0, 0, 0, 0.95) !important;
+                z-index: 9999 !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                padding: 0 1rem !important;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+            }
+
+            #header .logo-img {
+                width: 40px !important;
+                height: 40px !important;
+            }
+
+            /* MOBILE PACKAGES SECTION */
+            #packages {
+                margin-top: 50px !important;
+                padding-top: 0 !important;
+                position: relative !important;
+                z-index: 1 !important;
+                min-height: calc(100vh - 50px) !important;
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: flex-start !important;
+                width: 100% !important;
+            }
+
+            .services {
+                padding: 0 !important;
+                margin: 0 !important;
+                min-height: auto !important;
+                background: transparent !important;
+                display: block !important;
+                width: 100% !important;
+            }
+
+            .section-title {
+                padding: 1rem 0 0 0 !important;
+                margin: 0 0 1rem 0 !important;
+                text-align: center !important;
+                width: 100% !important;
+            }
+
+            .section-title h1 {
+                font-size: 1.5rem !important;
+                color: #ffffff !important;
+                margin: 0 !important;
+                padding: 0.5rem 1rem !important;
+                background: rgba(0, 0, 0, 0.6) !important;
+                border-radius: 10px !important;
+                display: inline-block !important;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+                border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            }
+
+            /* MOBILE GRID */
+            .services-grid {
+                display: grid !important;
+                grid-template-columns: 1fr !important;
+                gap: 0.8rem !important;
+                padding: 0.5rem !important;
+                width: 100% !important;
+            }
+
+            .service-card {
+                background: rgba(255, 255, 255, 0.1) !important;
+                border: 1px solid rgba(255, 255, 255, 0.2) !important;
+                border-radius: 12px !important;
+                padding: 0.8rem !important;
+                width: 100% !important;
+                display: block !important;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+            }
+
+            .service-img {
+                width: 100% !important;
+                height: 120px !important;
+                object-fit: cover !important;
+                border-radius: 8px !important;
+                margin-bottom: 0.8rem !important;
+            }
+
+            .service-content h3 {
+                font-size: 1.1rem !important;
+                color: #ffffff !important;
+                margin-bottom: 0.5rem !important;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8) !important;
+            }
+
+            .service-content p {
+                font-size: 0.85rem !important;
+                color: rgba(255, 255, 255, 0.9) !important;
+                margin-bottom: 0.8rem !important;
+                line-height: 1.4 !important;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6) !important;
+            }
+
+            .package-features-list {
+                background: rgba(0, 0, 0, 0.3) !important;
+                border: 1px solid rgba(255, 255, 255, 0.2) !important;
+                border-radius: 8px !important;
+                padding: 0.8rem !important;
+                margin: 0.8rem 0 !important;
+            }
+
+            .package-features-list span {
+                color: rgba(255, 255, 255, 0.9) !important;
+                font-size: 0.8rem !important;
+                display: block !important;
+                margin-bottom: 0.3rem !important;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6) !important;
+            }
+
+            .package-btn {
+                background: linear-gradient(135deg, #228B22, #32CD32) !important;
+                color: #ffffff !important;
+                border: 1px solid rgba(255, 255, 255, 0.3) !important;
+                border-radius: 20px !important;
+                padding: 0.8rem 1.5rem !important;
+                font-size: 0.9rem !important;
+                font-weight: 600 !important;
+                text-decoration: none !important;
+                display: inline-block !important;
+                text-align: center !important;
+                width: 100% !important;
+                max-width: 200px !important;
+                margin: 0 auto !important;
+                box-shadow: 0 4px 12px rgba(34, 139, 34, 0.4) !important;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
+            }
+
+            .package-btn:hover {
+                background: linear-gradient(135deg, #32CD32, #228B22) !important;
+                transform: translateY(-2px) !important;
+                box-shadow: 0 6px 16px rgba(34, 139, 34, 0.6) !important;
+            }
+
+            /* MOBILE NAVIGATION */
+            .nav-menu, #navigation {
+                display: none !important;
+            }
+
+            .nav-menu.active, #navigation.active {
+                display: block !important;
+                position: fixed !important;
+                top: 50px !important;
+                right: 0 !important;
+                width: 80% !important;
+                height: calc(100vh - 50px) !important;
+                background: rgba(0, 0, 0, 0.95) !important;
+                z-index: 9998 !important;
+                padding: 1rem !important;
+                overflow-y: auto !important;
+            }
+
+            /* REMOVE MOBILE ANIMATIONS */
+            *, *::before, *::after {
+                animation-duration: 0.01s !important;
+                transition-duration: 0.01s !important;
+            }
+
+            /* MOBILE FOOTER */
+            footer {
+                background: rgba(0, 0, 0, 0.9) !important;
+                color: #ffffff !important;
+                text-align: center !important;
+                padding: 1rem !important;
+                margin-top: auto !important;
+            }
+        }
+    </style>
+</head>
+<body class="packages-page">
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="water-loader"></div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="https://thumbs2.imgbox.com/be/96/PSCMGbNy_t.png" alt="HydroHogs Army Logo" class="logo-img">
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <nav id="navigation" class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="packages.html" class="active">Packages</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Packages Section -->
+    <section class="services section fade-in" id="packages">
+        <div class="container">
+            <div class="section-title">
+                <h1>Our Packages</h1>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-img" style="background: url('https://thumbs2.imgbox.com/d1/e3/nM5zjAcf_t.png'); background-size: cover; background-position: center;"></div>
+                    <div class="service-content">
+                        <h3>The Piglet</h3>
+                        <p>Perfect for smaller spaces - includes thorough cleaning of your driveway and back patio areas.</p>
+                        <div class="package-features-list">
+                            <span>✓ Driveway Cleaning</span>
+                            <span>✓ Back Patio Washing</span>
+                            <span>✓ Basic Surface Treatment</span>
+                        </div>
+                        <a href="piglet.html" class="btn package-btn">Get Quote & Details</a>
+                    </div>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-img" style="background: url('https://www.bennyspropertyservices.com/image/gallery/0034.jpg'); background-size: cover; background-position: center;"></div>
+                    <div class="service-content">
+                        <h3>The Razorback</h3>
+                        <p>Mid-level package covering driveway, entryway, and back patio for a complete exterior refresh.</p>
+                        <div class="package-features-list">
+                            <span>✓ Driveway Cleaning</span>
+                            <span>✓ Entryway Washing</span>
+                            <span>✓ Back Patio Treatment</span>
+                            <span>✓ Enhanced Surface Care</span>
+                        </div>
+                        <a href="razorback.html" class="btn package-btn">Get Quote & Details</a>
+                    </div>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-img" style="background: url('https://prowaterblasting.co.nz/wp-content/uploads/2021/04/house-wash-2.jpg'); background-size: cover; background-position: center;"></div>
+                    <div class="service-content">
+                        <h3>The Full Boar</h3>
+                        <p>Our most comprehensive package - gutters, driveway, entryway, and back patio all sparkling clean.</p>
+                        <div class="package-features-list">
+                            <span>✓ Gutter Cleaning</span>
+                            <span>✓ Complete Driveway Wash</span>
+                            <span>✓ Entryway Deep Clean</span>
+                            <span>✓ Full Patio Treatment</span>
+                            <span>✓ Premium Surface Care</span>
+                        </div>
+                        <a href="fullboar.html" class="btn package-btn">Get Quote & Details</a>
+                    </div>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-img" style="background: url('https://dubbelstruckwash.com/wp-content/uploads/2024/11/towing-truck-outdoor-pressure-washing-G45VA5F-1.jpg'); background-size: cover; background-position: center;"></div>
+                    <div class="service-content">
+                        <h3>The Hog Wash</h3>
+                        <p>Specialty auto package for cars, SUVs, and trucks including rims and undercarriage cleaning.</p>
+                        <div class="package-features-list">
+                            <span>✓ Exterior Vehicle Wash</span>
+                            <span>✓ Rim & Wheel Cleaning</span>
+                            <span>✓ Undercarriage Treatment</span>
+                            <span>✓ Salt & Grime Removal</span>
+                        </div>
+                        <a href="hogwash.html" class="btn package-btn">Get Quote & Details</a>
+                    </div>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-img" style="background: url('https://www.canr.msu.edu/invasive_species/uploads/images/Underboat%20Spray_MBW.jpg?language_id=1'); background-size: cover; background-position: center;"></div>
+                    <div class="service-content">
+                        <h3>The Sea Hog</h3>
+                        <p>Marine pressure washing for boats, jet skis, and watercraft. Hull cleaning, deck washing, and salt removal.</p>
+                        <div class="package-features-list">
+                            <span>✓ Hull Deep Cleaning</span>
+                            <span>✓ Deck Washing</span>
+                            <span>✓ Salt Deposit Removal</span>
+                            <span>✓ Marine Surface Care</span>
+                        </div>
+                        <a href="seahog.html" class="btn package-btn">Get Quote & Details</a>
+                    </div>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-img" style="background: url('https://i.imgur.com/Zp8rieT.png'); background-size: cover; background-position: center;"></div>
+                    <div class="service-content">
+                        <h3>Holiday Hog Lights</h3>
+                        <p>Professional holiday lighting installation and setup. Custom designs, safe installation, and seasonal takedown.</p>
+                        <div class="package-features-list">
+                            <span>✓ Custom Light Design</span>
+                            <span>✓ Professional Installation</span>
+                            <span>✓ Seasonal Maintenance</span>
+                            <span>✓ Complete Takedown</span>
+                        </div>
+                        <a href="holidaylights.html" class="btn package-btn">Get Quote & Details</a>
+                    </div>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-img" style="background: url('https://thumbs2.imgbox.com/4f/52/YL8mC6wA_t.png'); background-size: cover; background-position: center;"></div>
+                    <div class="service-content">
+                        <h3>Trash Bin Cleaning</h3>
+                        <p>Thorough cleaning and sanitization of trash cans and recycling bins. Remove odors, stains, and bacteria.</p>
+                        <div class="package-features-list">
+                            <span>✓ Deep Cleaning & Sanitization</span>
+                            <span>✓ Odor Elimination</span>
+                            <span>✓ Stain Removal</span>
+                            <span>✓ Bacteria Treatment</span>
+                        </div>
+                        <a href="trashbin.html" class="btn package-btn">$20 - Book Now</a>
+                    </div>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-img" style="background: url('https://www.pressurewashersdirect.com/images/stories/submitted/social_img_192_5deb21380050646fd1f315a32996e886.jpg'); background-size: cover; background-position: center;"></div>
+                    <div class="service-content">
+                        <h3>Lawncare Equipment Package</h3>
+                        <p>Professional cleaning and maintenance for lawn mowers, trimmers, and outdoor power equipment.</p>
+                        <div class="package-features-list">
+                            <span>✓ Lawn Mower Cleaning</span>
+                            <span>✓ Trimmer Washing</span>
+                            <span>✓ Equipment Sanitization</span>
+                            <span>✓ Rust Prevention</span>
+                        </div>
+                        <a href="lawncare.html" class="btn package-btn">$20 - Book Now</a>
+                    </div>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-img" style="background: url('https://i.imgur.com/Qs5x7EL.png'); background-size: cover; background-position: center;"></div>
+                    <div class="service-content">
+                        <h3>3 Little Pigs Nightmare</h3>
+                        <p>Spooky Halloween decorations and lighting setup. Transform your property into a haunted nightmare with professional installation.</p>
+                        <div class="package-features-list">
+                            <span>✓ Halloween Decoration Setup</span>
+                            <span>✓ Spooky Lighting Installation</span>
+                            <span>✓ Haunted House Effects</span>
+                            <span>✓ Professional Takedown</span>
+                        </div>
+                        <a href="3littlepigs.html" class="btn package-btn">Get Quote & Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>HydroHogs</h3>
+                    <p>Your trusted partner in professional pressure washing services. We make your property shine like new.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘 Facebook</a>
+                        <a href="#" aria-label="Instagram">📷 Instagram</a>
+                        <a href="mailto:HydrohogsPSI@gmail.com" aria-label="Email">✉️ Email</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="packages.html">House Washing</a></li>
+                        <li><a href="packages.html">Driveway Cleaning</a></li>
+                        <li><a href="packages.html">Deck & Fence Cleaning</a></li>
+                        <li><a href="packages.html">Commercial Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Shawn Hamilton</h3>
+                    <p>(904) 799-3932</p>
+                    <p>HydrohogsPSI@gmail.com</p>
+                    <p>Hydrohogs.com<br>U.S Veteran Owned & Operated</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="footer-bottom">
+                    <p>&copy; 2024 HydroHogs. All rights reserved.</p>
+                    <div class="developer-credits">
+                        <p>Website developed by <a href="https://ninjatechhq.com" target="_blank" rel="noopener noreferrer">NinjaTechHQ</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // DISABLED ALL JAVASCRIPT TO PREVENT INTERFERENCE
+        // Mobile menu functionality removed
+        // Page loader functionality removed
+        // Scroll effects removed
+        // Animation observers removed
+
+        // Only keep essential functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hide loader immediately if it exists
+            const loader = document.getElementById('pageLoader');
+            if (loader) {
+                loader.style.display = 'none';
+                loader.remove();
+            }
+
+            // Ensure mobile menu is hidden by default
+            const navigation = document.getElementById('navigation');
+            if (navigation) {
+                navigation.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
